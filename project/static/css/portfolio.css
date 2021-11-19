@@ -1,0 +1,43 @@
+#site_title {
+    margin-top: 1.7em;
+    padding-top: 0.9em;
+    background-image: url("../images/basketflower.jpg");
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+    width: 85%;
+    height: 95%;
+    padding-left: 1em;
+}
+
+#title_span {
+    font-size: 2.1em;
+    display: block;
+    margin-top: -3em;
+    padding-top:3em;
+}
+
+.content {
+    margin-top: 3em;
+    padding-left: 1.5em
+}
+
+#plofiletable {
+    margin-left: 1em;
+    height: 8em;
+    width: 30em;
+}
+
+#myname {
+    font-size: 0.9em;
+}
+
+#contact_link {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+.icons {
+    padding-right: 1em;
+    width: 3em;
+    height: 3em;
+}

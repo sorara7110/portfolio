@@ -1,0 +1,39 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+<h1 id="site_title" class="title is-spaced has-text-weight-medium">
+    <span id="title_span">Nakajima Takumi's Portfolio</span>
+</h1>
+
+<div class="content is-medium">
+    <h1>Plofile</h1>
+    <table id="plofiletable" style="border:none" class="table is-hoverable">
+        <tr class="plofiletable">
+            <td>Name</td>
+            <td>中島 拓己　<span id =myname>Nakajima Takumi</span></td>
+        </tr>
+        <tr class="plofiletable">
+            <td>University</td>
+            <td>立正大学環境システム学科</td>
+        </tr>
+        <tr class="plofiletable">
+            <td>Birthday</td>
+            <td>1998.4.22</td>
+        </tr>
+    </table>
+</div>
+
+<div id="Works" class="content is-medium">
+    <h1>Works</h1>
+</div>
+
+<div id="Contact" class="content is-medium">
+    <h1>Contact</h1>
+    <div id="contact_link">
+        <a href="mailto:nakajin7110@gmail.com"><img class="icons" src="static/images/mail.svg" ></a>
+        <a href="https://github.com/sorara7110"><img class="icons" src="static/images/mark-github.svg" ></a>
+    </div>
+</div>
+
+{% endblock %}
