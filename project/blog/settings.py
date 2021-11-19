@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3tz3ssyv_o96*=nu_*1yrf(rchm%qvwt#yx&*pbfc7he1i_(lc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','3.113.10.80','www.sorara-portfolio.net']
 
 
 # Application definition
