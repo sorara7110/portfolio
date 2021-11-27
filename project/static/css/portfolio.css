@@ -1,45 +1,69 @@
+/* タイトル */
+
 #site_title {
     margin-top: 1.7em;
-    padding-top: 0.9em;
+    padding-top: 1.2vmax;
+    padding-left: 1.5vmax;
     background-image: url("../images/basketflower.jpg");
     background-size: cover;
     background-position: left top;
     background-repeat: no-repeat;
-    width: 85%;
-    height: 95%;
-    padding-left: 1em;
+    width: 90vw;
+    height: 45vw;
 }
 
 #title_span {
-    font-size: 2.5em;
-    display: block;
-    margin-top: -3em;
-    padding-top:3em;
+    font-size: 4.6vw;
 }
 
+/* 本文 */
+
 .content {
+    font-size: 3.0vmin;
     margin-top: 3em;
     padding-left: 1.5em
 }
 
+/* プロフィール */
+
+
+
 #plofiletable {
-    margin-left: 1em;
     height: 8em;
-    width: 30em;
+    width: 85vmin;
 }
 
 #myname {
     font-size: 0.9em;
 }
 
+/* 制作物 */
+
+.card {
+    width: 30.0rem;
+    height: fit-content;
+    font-size: 1.0rem;
+}
+
+.card-image{
+    margin-left: -2.0em;
+    margin-right: -2.0em;
+}
+
+.tool_list{
+    margin-top: -1rem;
+}
+
 .tool_list li {
     display: inline-block;
-    font-size: 0.9em;
+    font-size: 1.0em;
 }
 
 .tool_list li:not(:last-child)::after {
     content: ',';
 }
+
+/* コンタクト */
 
 #contact_link {
     margin-bottom: 1em;

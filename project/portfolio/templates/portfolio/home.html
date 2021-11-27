@@ -6,7 +6,7 @@
     <span id="title_span">Nakajima Takumi's Portfolio</span>
 </h1>
 
-<div id=Plofile class="content is-large">
+<div id=Plofile class="content">
     <h1>Plofile</h1>
     <table id="plofiletable" style="border:none" class="table is-hoverable">
         <tr class="plofiletable">
@@ -24,7 +24,7 @@
     </table>
 </div>
 
-<div id="Works" class="content is-large">
+<div id="Works" class="content">
     <h1>Works</h1>
     {% for work in works %}
     <div class="card">
@@ -34,42 +34,40 @@
             </p>
         </header>
         <div class="card-image">
-            <figure class="image is-16by9">
+            <figure class="image">
                 <img src="{{work.thumbnail.url}}" alt="">
             </figure>
         </div>
         <div class="card-content">
-            <div class="content">
-                <h6>使用言語など</h6>
-                <p>
-                    <ul class="tool_list">
+            <h6>使用言語など</h6>
+            <p>
+                <ul class="tool_list">
                 {% for tool in work.related_tool.all %}
                 {% if tool.tool_class == "1" %}
-                        <li>{{tool.tool_name}}</li>
+                    <li>{{tool.tool_name}}</li>
                 {% endif %}
                 {% endfor %}
-                    </ul>
-                </p>
-                <p>
-                    <ul class="tool_list">
+                </ul>
+            </p>
+            <p>
+                <ul class="tool_list">
                 {% for tool in work.related_tool.all %}
                 {% if tool.tool_class == "2" %}
                     <li>{{tool.tool_name}} </li>
                 {% endif %}
                 {% endfor %}
-                    </ul>
-                </p>
-            </div>
-            <footer class="card-footer">
-                <a href="{% url 'app_detail' pk=work.pk %}" class="card-footer-item">紹介ページへ</a>
-                <a href="{{work.URL.url}}" class="card-footer-item">サイトへ</a>
-            </footer>
+                </ul>
+            </p>
         </div>
+        <footer class="card-footer">
+            <a href="{% url 'app_detail' pk=work.pk %}" class="card-footer-item">紹介ページへ</a>
+            <a href="{{work.URL.url}}" class="card-footer-item">サイトへ</a>
+        </footer>
     </div>
     {% endfor %}
 </div>
 
-<div id="Contact" class="content is-large">
+<div id="Contact" class="content">
     <h1>Contact</h1>
     <div id="contact_link">
         <a href="mailto:nakajin7110@gmail.com"><img class="icons" src="static/images/mail.svg" ></a>
