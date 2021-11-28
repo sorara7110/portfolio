@@ -8,5 +8,5 @@ def home(request):
     return render(request, 'portfolio/home.html', {'works': works})
 
 def work_detail(request, pk):
-    works = Work.objects.get(pk=pk)
-    return render(request, 'portfolio/work/detail', {'works': works})
+    work = Work.objects.get(pk=pk)
+    return render(request, 'portfolio/work_detail.html', {'work': work})

@@ -1,32 +1,88 @@
-/* タイトル */
-
-#site_title {
-    margin-top: 1.7em;
-    padding-top: 1.2vmax;
-    padding-left: 1.5vmax;
-    background-image: url("../images/basketflower.jpg");
-    background-size: cover;
-    background-position: left top;
-    background-repeat: no-repeat;
-    width: 90vw;
-    height: 45vw;
+/* ナビゲーションバー */
+#navbar {
+    box-shadow:0 2px 5px 0 rgba(0, 0, 0, .05);
 }
 
-#title_span {
-    font-size: 4.6vw;
+/* タイトル */
+@media screen and (min-width: 768px) {
+    #site_title {
+        margin-top: 1.64em;
+        padding-top: 1.2vmax;
+        padding-left: 1.5vmax;
+        background-image: url("../images/basketflower.jpg");
+        background-size: cover;
+        background-position: left top;
+        background-repeat: no-repeat;
+        width: 90vw;
+        height: 45vw;
+    }
+
+    #title_span {
+        font-size: 4.6vw;
+        padding-top: 3em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #site_title {
+        margin-top: 1.7em;
+        padding-top: 1.2vmax;
+        padding-left: 1.5vmax;
+        background-image: url("../images/basketflower.jpg");
+        background-size: cover;
+        background-position: left top;
+        background-repeat: no-repeat;
+        width: 90vw;
+        height: 150vw;
+    }
+    
+    #title_span {
+        font-size: 10.0vw;
+        padding-top: 3em;
+    }
+}
+
+#page_title {
+    margin-top: 4.5rem;
+    padding-left: 1.5vmax;
+    font-size: 4.5vmin;
+    font-weight: bold;
 }
 
 /* 本文 */
 
+body{
+    overflow-x: hidden;
+}
+
 .content {
     font-size: 3.0vmin;
-    margin-top: 3em;
-    padding-left: 1.5em
+    padding-left: 1.5em;
+    padding-top: 3em;
+}
+
+#published_date {
+    padding-left: 2.0vmax;
+    font-size: 0.8em;
+    color: #999999;
+}
+
+#thumbnail {
+    margin-top: 1.0em;
+    position: left top;
+    width: 80vmin;
+    height: auto;
+    box-shadow: 
+        2px 3px 7px 0px rgba(0, 0, 0, .1), 
+		0px -1px 4px 0px rgba(0, 0, 0, .07);
+}
+
+.text {
+    margin-left: 1.0em;
+    overflow-wrap: normal;
 }
 
 /* プロフィール */
-
-
 
 #plofiletable {
     height: 8em;
@@ -37,10 +93,11 @@
     font-size: 0.9em;
 }
 
+
 /* 制作物 */
 
 .card {
-    width: 30.0rem;
+    width: 21.5rem;
     height: fit-content;
     font-size: 1.0rem;
 }
@@ -50,18 +107,20 @@
     margin-right: -2.0em;
 }
 
-.tool_list{
-    margin-top: -1rem;
+.card-content{
+    margin-left: -0.5rem;
 }
 
 .tool_list li {
     display: inline-block;
     font-size: 1.0em;
+    margin-left: -1.5rem;
 }
 
 .tool_list li:not(:last-child)::after {
-    content: ',';
+    content: ', 　';
 }
+
 
 /* コンタクト */
 

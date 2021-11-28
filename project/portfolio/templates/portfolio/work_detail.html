@@ -1,0 +1,27 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+    <h1 id="page_title">{{work.title}}</h1>
+    <p id="published_date">
+        更新日：{{work.published_date}}
+    </p>
+    <img id="thumbnail" src="{{work.thumbnail.url}}" alt="">
+    
+    <div class="content">
+        <h4>機能紹介</h4>
+        <p class="text">
+            {{work.introduction|linebreaksbr}}
+        </p>
+    </div>
+
+    <div class="content">
+        <h4>開発経緯</h4>
+        <p class="text">
+            {{work.explanation|linebreaksbr}}
+        </p>
+    </div>
+</body>
+
+{% endblock %}
