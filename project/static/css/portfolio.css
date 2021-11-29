@@ -37,7 +37,7 @@
     }
     
     #title_span {
-        font-size: 10.0vw;
+        font-size: 12.0vw;
         padding-top: 3em;
     }
 }
@@ -45,7 +45,7 @@
 #page_title {
     margin-top: 4.5rem;
     padding-left: 1.5vmax;
-    font-size: 4.5vmin;
+    font-size: 1.55em;
     font-weight: bold;
 }
 
@@ -56,9 +56,18 @@ body{
 }
 
 .content {
-    font-size: 3.0vmin;
-    padding-left: 1.5em;
+    padding-left: 4.0vmin;
     padding-top: 3em;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+.content h1 {
+    font-size: 4.0vmax;
+}
+
+.content h2 {
+    font-size: 1.3em;
 }
 
 #published_date {
@@ -70,7 +79,7 @@ body{
 #thumbnail {
     margin-top: 1.0em;
     position: left top;
-    width: 80vmin;
+    width: 85vmin;
     height: auto;
     box-shadow: 
         2px 3px 7px 0px rgba(0, 0, 0, .1), 
@@ -78,8 +87,12 @@ body{
 }
 
 .text {
-    margin-left: 1.0em;
-    overflow-wrap: normal;
+    margin-left: 0.5em;
+}
+
+.text_box {
+    width: 70vmin;
+    margin-left: 0.5em;
 }
 
 /* プロフィール */
@@ -95,6 +108,11 @@ body{
 
 
 /* 制作物 */
+.card_area {
+    display: flex;
+    flex-wrap: wrap;
+    align-content:flex-start;
+}
 
 .card {
     width: 21.5rem;
@@ -109,11 +127,13 @@ body{
 
 .card-content{
     margin-left: -0.5rem;
+    height:11.5rem
 }
 
 .tool_list li {
     display: inline-block;
     font-size: 1.0em;
+    
     margin-left: -1.5rem;
 }
 
@@ -130,7 +150,7 @@ body{
 }
 
 .icons {
-    padding-right: 1em;
-    width: 3em;
-    height: 3em;
+    margin-right: 1.0em;
+    width: 3.0em;
+    height: 3.0em;
 }

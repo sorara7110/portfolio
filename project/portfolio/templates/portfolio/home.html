@@ -26,45 +26,47 @@
 
 <div id="Works" class="content">
     <h1>Works</h1>
-    {% for work in works %}
-    <div class="card">
-        <header class="card-header">
-            <p class="card-header-title">
-                {{work.title}}
-            </p>
-        </header>
-        <div class="card-image">
-            <figure class="image">
-                <img src="{{work.thumbnail.url}}" alt="">
-            </figure>
+    <div class="card_area">
+        {% for work in works %}
+        <div class="card">
+            <header class="card-header">
+                <p class="card-header-title">
+                    {{work.title}}
+                </p>
+            </header>
+            <div class="card-image">
+                <figure class="image">
+                    <img src="{{work.thumbnail.url}}" alt="">
+                </figure>
+            </div>
+            <div class="card-content">
+                <h6>使用言語など</h6>
+                <p>
+                    <ul class="tool_list">
+                    {% for tool in work.related_tool.all %}
+                    {% if tool.tool_class == "1" %}
+                        <li>{{tool.tool_name}}</li>
+                    {% endif %}
+                    {% endfor %}
+                    </ul>
+                </p>
+                <p>
+                    <ul class="tool_list">
+                    {% for tool in work.related_tool.all %}
+                    {% if tool.tool_class == "2" %}
+                        <li>{{tool.tool_name}} </li>
+                    {% endif %}
+                    {% endfor %}
+                    </ul>
+                </p>
+            </div>
+            <footer class="card-footer">
+                <a href="{% url 'app_detail' pk=work.pk %}" class="card-footer-item">紹介ページへ</a>
+                <a href="{{work.URL.url}}" class="card-footer-item">サイトへ</a>
+            </footer>
         </div>
-        <div class="card-content">
-            <h6>使用言語など</h6>
-            <p class="tool_lists">
-                <ul class="tool_list">
-                {% for tool in work.related_tool.all %}
-                {% if tool.tool_class == "1" %}
-                    <li>{{tool.tool_name}}</li>
-                {% endif %}
-                {% endfor %}
-                </ul>
-            </p>
-            <p>
-                <ul class="tool_list">
-                {% for tool in work.related_tool.all %}
-                {% if tool.tool_class == "2" %}
-                    <li>{{tool.tool_name}} </li>
-                {% endif %}
-                {% endfor %}
-                </ul>
-            </p>
-        </div>
-        <footer class="card-footer">
-            <a href="{% url 'app_detail' pk=work.pk %}" class="card-footer-item">紹介ページへ</a>
-            <a href="{{work.URL.url}}" class="card-footer-item">サイトへ</a>
-        </footer>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 
 <div id="Contact" class="content">

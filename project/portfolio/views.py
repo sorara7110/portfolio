@@ -9,4 +9,5 @@ def home(request):
 
 def work_detail(request, pk):
     work = Work.objects.get(pk=pk)
-    return render(request, 'portfolio/work_detail.html', {'work': work})
+    works = Work.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')
+    return render(request, 'portfolio/work_detail.html', {'work': work, 'works':works})
