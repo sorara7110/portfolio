@@ -14,7 +14,7 @@
         background-position: left top;
         background-repeat: no-repeat;
         width: 90vw;
-        height: 45vw;
+        height: 91vh;
     }
 
     #title_span {
@@ -45,7 +45,7 @@
 #page_title {
     margin-top: 4.5rem;
     padding-left: 1.5vmax;
-    font-size: 1.55em;
+    font-size: 1.6em;
     font-weight: bold;
 }
 
