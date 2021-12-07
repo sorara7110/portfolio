@@ -1,10 +1,16 @@
 {% extends 'calculator/base.html' %}
+{% load static %}
 {% block content %}
 
-<h1 id="site_title" class="title is-spaced has-text-weight-large">多様度指数計算機</h1>
-
 <form method="POST" enctype="multipart/form-data" accept=".csv">{% csrf_token %}
-{{form.as_p}}
+    {{form.as_p}}
 <button type="submit">Upload</button>
 </form>
+
+<p>
+    多様度指数(H')：{{H}}
+</p>
+<p>
+<img src="{{graph}}" alt="">
+</p>
 {% endblock %}

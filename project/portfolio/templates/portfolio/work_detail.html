@@ -2,52 +2,50 @@
 {% load static %}
 {% block content %}
 
-<body>
-    <h1 id="page_title">{{work.title}}</h1>
-    <p id="published_date">
-        更新日：{{work.published_date}}
-    </p>
-    <img id="thumbnail" src="{{work.thumbnail.url}}" alt="">
+<h1 id="page_title">{{work.title}}</h1>
+<p id="published_date">
+    更新日：{{work.published_date}}
+</p>
+<img id="thumbnail" src="{{work.thumbnail.url}}" alt="">
 
-    <div class="content">
-        <h2>使用言語、ツール</h2>
-        <div class="text">
-            <p>
-                <h6>言語：</h6> 
-                <ul class="tool_list">
-                    {% for tool in work.related_tool.all %}
-                    {% if tool.tool_class == "1" %}
-                        <li>{{tool.tool_name}}</li>
-                    {% endif %}
-                    {% endfor %}
-                </ul>
-            </p>
-            <p>
-                <h6>ツール：</h6>
-                <ul class="tool_list">
-                    {% for tool in work.related_tool.all %}
-                    {% if tool.tool_class == "2" %}
-                        <li>{{tool.tool_name}}</li>
-                    {% endif %}
-                    {% endfor %}
-                </ul>
-            </p>
-        </div>
+<div class="content">
+    <h2>使用言語、ツール</h2>
+    <div class="text">
+        <p>
+            <h6>言語：</h6> 
+            <ul class="tool_list">
+                {% for tool in work.related_tool.all %}
+                {% if tool.tool_class == "1" %}
+                    <li>{{tool.tool_name}}</li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </p>
+        <p>
+            <h6>ツール：</h6>
+            <ul class="tool_list">
+                {% for tool in work.related_tool.all %}
+                {% if tool.tool_class == "2" %}
+                    <li>{{tool.tool_name}}</li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </p>
     </div>
+</div>
 
-    <div class="content">
-        <h2>機能紹介</h2>
-        <div class="text_box">
-            {{work.introduction|linebreaksbr}}
-        </div>
+<div class="content">
+    <h2>機能紹介</h2>
+    <div class="text_box">
+        {{work.introduction|linebreaksbr}}
     </div>
+</div>
 
-    <div class="content">
-        <h2>開発経緯</h2>
-        <div class="text_box">
-            {{work.explanation|linebreaksbr}}
-        </div>
+<div class="content">
+    <h2>開発経緯</h2>
+    <div class="text_box">
+        {{work.explanation|linebreaksbr}}
     </div>
-</body>
+</div>
 
 {% endblock %}

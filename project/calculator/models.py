@@ -1,3 +1,12 @@
+from django.conf import settings
 from django.db import models
+from django.core.validators import FileExtensionValidator
 
-# Create your models here.
+class Csv_read(models.Model):
+    file = models.FileField(upload_to='csv', validators=[FileExtensionValidator(['csv'])])
+
+    def publish(self):
+        self.save()
+
+    def __str__(self):
+        return self.file.url
