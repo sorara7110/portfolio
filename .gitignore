@@ -3,3 +3,5 @@ project/blog/settings.py
 project/static/admin/
 /media/
 *.pyc
+/__pycache__/
+/migrations/
