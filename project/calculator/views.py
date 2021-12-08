@@ -20,8 +20,13 @@ def calculator(request):
                 Csv_read.objects.get(pk=pk).delete()
             else:
                 pass
+
             H, graph = diversity_calc(csv_data.file)
-            return render(request, 'calculator/diversity_result.html', {"form": form, "H": H, "graph": graph})
+            if H == "error":
+                form = UploadFileForm()
+                return render(request, 'calculator/home.html', {"form": form})
+            else:
+                return render(request, 'calculator/diversity_result.html', {"form": form, "H": H, "graph": graph})
 
 
     else:

@@ -62,7 +62,7 @@
             </div>
             <footer class="card-footer">
                 <a href="{% url 'app_detail' pk=work.pk %}" class="card-footer-item">紹介ページへ</a>
-                <a href="{{work.URL.url}}" class="card-footer-item">サイトへ</a>
+                <a href="{{work.URL}}" class="card-footer-item">サイトへ</a>
             </footer>
         </div>
         {% endfor %}

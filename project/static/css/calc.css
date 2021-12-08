@@ -1,0 +1,30 @@
+/* ナビバー */
+#nav_title {
+    padding-left: 2.0rem;
+    height: 1.6em;
+    font-size: 2.5em;
+    font-weight: bold
+}
+
+.navbar {
+    background-color: #f5b1aa;
+}
+
+/* 本文 */
+#table {
+    width: 15.0rem;
+}
+
+#result {
+    padding-left: 0.5rem;
+}
+
+#H {
+    margin-top: -0.5rem;
+    padding-left: 0.7rem;
+    font-size: 1.3rem;
+}
+
+#graph {
+    padding-left: 0.7rem;
+}

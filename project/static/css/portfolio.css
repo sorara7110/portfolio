@@ -115,6 +115,8 @@ body{
 }
 
 .card {
+    margin-right: 1.0rem;
+    margin-bottom: 1.0rem;
     width: 21.5rem;
     height: fit-content;
     font-size: 1.0rem;

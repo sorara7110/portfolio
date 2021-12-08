@@ -1,10 +1,58 @@
 {% extends 'calculator/base.html' %}
+{% load widget_tweaks %}
 {% block content %}
 
-<h1 id="site_title" class="title is-spaced has-text-weight-large">多様度指数計算機</h1>
-
-<form method="POST" enctype="multipart/form-data" accept=".csv">{% csrf_token %}
-{{form.as_p}}
-<button type="submit">Upload</button>
-</form>
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="box">
+            <div class="content">        
+                <h1 id="site_title" class="title is-spaced has-text-weight-medium is-family-monospace">多様度指数計算機</h1>
+                <p class="pl-1">csvファイルを読み込みShannon-Weaverの多様度指数H'を算出します。<br>対数の底は2で計算しています。<br>以下の形式のcsvファイルを読み込んでください。</p>
+                    <table id="table" class="table is-bordered">
+                        <tbody>
+                          <tr>
+                            <th></th>
+                            <th>個体数</th>
+                          </tr>
+                          <tr>
+                            <td>種1</td>
+                            <td>x1</td>
+                          </tr>
+                          <tr>
+                            <td>種2</td>
+                            <td>x2</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>種3</td>
+                            <td>x3</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                <form method="POST" enctype="multipart/form-data" accept=".csv">{% csrf_token %}
+                    <div class="file">
+                        <label class="file-label">
+                            {% csrf_token %}
+                            {{ form.file|add_class:"file-input" }}
+                            <span class="file-cta">
+                                <span class="file-icon">
+                                    <i class="fas fa-upload"></i>
+                                </span>
+                                <span class="file-label">
+                                    ファイルを選択
+                                </span>
+                            </span>
+                        </label>
+                    </div>        
+                    <div class="control">
+                        <button class="button button is-outlined mt-3" type="submit">アップロード</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

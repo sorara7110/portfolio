@@ -1,4 +1,5 @@
 {% load static %}
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,7 +9,14 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <link rel="stylesheet" href="{% static 'css/calc.css' %}">
     </head>
+
     <body>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <span id = nav_title>calculotor</span>
+            </div>
+        </nav>
+
         {% block content %}
         {% endblock %}
     </body>
