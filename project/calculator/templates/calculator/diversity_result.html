@@ -6,10 +6,12 @@
     <div class="container is-max-widescreen">
         <div class="box">
             <div class="content">
+                <!-- 計算結果表示 -->
                 <h1 id="site_title" class="title has-text-weight-medium is-family-monospace">多様度指数計算機</h1>
                 <h6 id="result" class="has-text-weight-medium is-size-4">計算結果</h6>
                 <p id="H">多様度指数(H')：{{ H }}</p>
                 <img id="graph" src="{{graph}}" alt="">
+                <!-- 再び計算するとき用のフォーム -->
                 <p class="is-size-5 pt-5">もう一度計算する</p>
                 <form method="POST" enctype="multipart/form-data" accept=".csv">{% csrf_token %}
                     <div class="file">

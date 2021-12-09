@@ -2,12 +2,14 @@
 {% load static %}
 {% block content %}
 
+<!-- タイトル -->
 <h1 id="page_title">{{work.title}}</h1>
 <p id="published_date">
     更新日：{{work.published_date}}
 </p>
 <img id="thumbnail" src="{{work.thumbnail.url}}" alt="">
 
+<!-- 使用言語一覧 -->
 <div class="content">
     <h2>使用言語、ツール</h2>
     <div class="text">
@@ -34,6 +36,7 @@
     </div>
 </div>
 
+<!-- 機能説明 -->
 <div class="content">
     <h2>機能紹介</h2>
     <div class="text_box">
@@ -41,6 +44,7 @@
     </div>
 </div>
 
+<!-- 開発経緯説明 -->
 <div class="content">
     <h2>開発経緯</h2>
     <div class="text_box">

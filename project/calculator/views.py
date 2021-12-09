@@ -8,6 +8,7 @@ def calculator(request):
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
 
+        # 過去のファイルの削除
         if form.is_valid():
             if os.path.isfile("/django/project/media/graph.svg"):
                 os.remove("/django/project/media/graph.svg")
@@ -21,7 +22,10 @@ def calculator(request):
             else:
                 pass
 
+            # 多様度指数算出関数の呼び出し
             H, graph = diversity_calc(csv_data.file)
+
+            # アップロードされたCSVファイルの形式が正しくなければトップページヘ
             if H == "error":
                 form = UploadFileForm()
                 return render(request, 'calculator/home.html', {"form": form})
