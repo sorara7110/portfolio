@@ -25,6 +25,6 @@ class Work(models.Model):
 class Tool(models.Model):
     class_name = (("1", "language"),("2", "tool"))
     
-    post = models.ManyToManyField(Work, related_name='related_tool',blank=True, null=True)
+    post = models.ManyToManyField(Work, related_name='related_tool',blank=True)
     tool_name = models.CharField(max_length=100)
     tool_class = models.CharField(max_length=20, choices=class_name)
