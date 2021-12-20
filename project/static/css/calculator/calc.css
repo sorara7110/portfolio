@@ -11,20 +11,32 @@
 }
 
 /* 本文 */
-#table {
-    width: 15.0rem;
+@media screen and (min-width: 768px) {
+    #table {
+        width: 31.0rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #table {
+        margin-left: -0.5rem;
+        width: 19.0rem;
+        font-size: 0.85rem;
+    }
 }
 
 #result {
     padding-left: 0.5rem;
 }
 
-#H {
-    margin-top: -0.5rem;
-    padding-left: 0.7rem;
-    font-size: 1.3rem;
+#table {
+    z-index:1;
+    margin-top: -1.5rem;
+    padding-left: 0.1rem;
 }
 
 #graph {
+    z-index:2;
+    margin-top: -7.0rem;
     padding-left: 0.7rem;
 }
