@@ -8,7 +8,7 @@ class Csv_read(models.Model):
     def publish(self):
         self.save()
 
-class Meta:
+    class Meta:
         app_label = 'calculator'
 
     def __str__(self):
